@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { ArrowDown, ExternalLink } from "lucide-react"
+import { ArrowDown, Download, Eye } from "lucide-react"
 
 const typingTexts = [
   "Aspiring Frontend Developer",
@@ -153,19 +153,51 @@ export function HeroSection() {
         >
           <a
             href="#projects"
-            className="group flex items-center gap-2 rounded-lg bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:shadow-[0_0_20px_rgba(88,166,255,0.4)]"
+            className="group flex items-center gap-2 rounded-xl bg-primary px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-all hover:shadow-[0_0_20px_rgba(88,166,255,0.4)]"
           >
             View Projects
             <ArrowDown size={16} className="transition-transform group-hover:translate-y-0.5" />
           </a>
           <a
-            href="/resume.pdf"
+            href="/Sudha_Mareeswaran_Frontend_Resume_2026.pdf"
+            download
+            className="group relative flex items-center gap-2 overflow-hidden rounded-xl px-8 py-3.5 text-sm font-semibold text-foreground transition-all duration-300 hover:text-primary-foreground hover:shadow-[0_0_25px_rgba(88,166,255,0.35)]"
+            style={{
+              background: "linear-gradient(135deg, #1a3a5c 0%, #1c2d4a 50%, #162640 100%)",
+              border: "1px solid rgba(88, 166, 255, 0.25)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, #1e4d7a 0%, #234e80 50%, #1a3d66 100%)"
+              e.currentTarget.style.borderColor = "rgba(88, 166, 255, 0.5)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, #1a3a5c 0%, #1c2d4a 50%, #162640 100%)"
+              e.currentTarget.style.borderColor = "rgba(88, 166, 255, 0.25)"
+            }}
+          >
+            <Download size={16} className="transition-transform duration-300 group-hover:translate-y-0.5" />
+            Download Resume
+          </a>
+          <a
+            href="/Sudha_Mareeswaran_Frontend_Resume_2026.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-2 rounded-lg border border-border bg-transparent px-8 py-3.5 text-sm font-semibold text-foreground transition-all hover:border-primary/50 hover:bg-primary/5 hover:text-primary"
+            className="group relative flex items-center gap-2 overflow-hidden rounded-xl px-8 py-3.5 text-sm font-semibold text-foreground transition-all duration-300 hover:text-primary-foreground hover:shadow-[0_0_25px_rgba(88,166,255,0.35)]"
+            style={{
+              background: "linear-gradient(135deg, #1a3a5c 0%, #1c2d4a 50%, #162640 100%)",
+              border: "1px solid rgba(88, 166, 255, 0.25)",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, #1e4d7a 0%, #234e80 50%, #1a3d66 100%)"
+              e.currentTarget.style.borderColor = "rgba(88, 166, 255, 0.5)"
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.background = "linear-gradient(135deg, #1a3a5c 0%, #1c2d4a 50%, #162640 100%)"
+              e.currentTarget.style.borderColor = "rgba(88, 166, 255, 0.25)"
+            }}
           >
-            Download Resume
-            <ExternalLink size={16} className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            <Eye size={16} className="transition-transform duration-300 group-hover:scale-110" />
+            View Resume
           </a>
         </div>
       </div>
