@@ -8,13 +8,13 @@ const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "sudhamarees05@gmail.com",
-    href: "mailto:sudhamarees05@gmail.com",
+    value: "sudhamarees@gmail.com",
+    href: "mailto:sudhamarees@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 6374061395",
+    value: "+91 63740 61395",
     href: "tel:+916374061395",
   },
   {
@@ -121,7 +121,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <p className="text-xs text-muted-foreground">{item.label}</p>
-                    <p className="text-sm font-medium text-foreground">{item.value}</p>
+                    <p className="text-sm font-medium text-foreground transition-colors duration-300 group-hover:text-primary">{item.value}</p>
                   </div>
                 </a>
               ))}
