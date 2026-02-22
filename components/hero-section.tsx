@@ -5,14 +5,14 @@ import { ArrowDown, ExternalLink } from "lucide-react"
 
 const typingTexts = [
   "Aspiring Frontend Developer",
-  "React Enthusiast",
-  "Creative Web Engineer",
+  "Electronics & Communication Engineer",
 ]
 
 export function HeroSection() {
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [displayedText, setDisplayedText] = useState("")
   const [isDeleting, setIsDeleting] = useState(false)
+  const [isFading, setIsFading] = useState(false)
   const [isLoaded, setIsLoaded] = useState(false)
 
   useEffect(() => {
@@ -27,18 +27,28 @@ export function HeroSection() {
       if (displayedText.length < currentFullText.length) {
         timeout = setTimeout(() => {
           setDisplayedText(currentFullText.slice(0, displayedText.length + 1))
-        }, 80)
+        }, 70)
       } else {
-        timeout = setTimeout(() => setIsDeleting(true), 2000)
+        // Pause longer at full text, then start fade-out before deleting
+        timeout = setTimeout(() => {
+          setIsFading(true)
+          setTimeout(() => {
+            setIsDeleting(true)
+            setIsFading(false)
+          }, 400)
+        }, 2500)
       }
     } else {
       if (displayedText.length > 0) {
         timeout = setTimeout(() => {
           setDisplayedText(displayedText.slice(0, -1))
-        }, 40)
+        }, 35)
       } else {
-        setIsDeleting(false)
-        setCurrentTextIndex((prev) => (prev + 1) % typingTexts.length)
+        // Brief pause before typing next text
+        timeout = setTimeout(() => {
+          setIsDeleting(false)
+          setCurrentTextIndex((prev) => (prev + 1) % typingTexts.length)
+        }, 500)
       }
     }
 
@@ -107,12 +117,21 @@ export function HeroSection() {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
-          <span className="text-lg text-muted-foreground sm:text-xl md:text-2xl">
+          <span
+            className="text-lg font-semibold text-primary sm:text-xl md:text-2xl transition-opacity duration-400"
+            style={{
+              opacity: isFading ? 0.3 : 1,
+              textShadow: "0 0 10px rgba(88, 166, 255, 0.6), 0 0 20px rgba(88, 166, 255, 0.3), 0 0 40px rgba(88, 166, 255, 0.15)",
+            }}
+          >
             {displayedText}
           </span>
           <span
-            className="ml-1 inline-block w-0.5 h-6 bg-primary align-middle"
-            style={{ animation: "typing-cursor 1s infinite" }}
+            className="ml-1 inline-block w-[3px] h-7 rounded-full bg-primary align-middle"
+            style={{
+              animation: "typing-cursor 0.8s ease-in-out infinite",
+              boxShadow: "0 0 8px rgba(88, 166, 255, 0.6), 0 0 16px rgba(88, 166, 255, 0.3)",
+            }}
           />
         </div>
 
