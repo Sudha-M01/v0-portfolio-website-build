@@ -81,9 +81,8 @@ export function HeroSection() {
       <div className="relative z-10 mx-auto max-w-4xl text-center">
         {/* Avatar */}
         <div
-          className={`mx-auto mb-8 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/50 transition-all duration-1000 ${
-            isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-75"
-          }`}
+          className={`mx-auto mb-8 flex h-28 w-28 items-center justify-center rounded-full border-2 border-primary/50 transition-all duration-1000 ${isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-75"
+            }`}
           style={{
             background: "linear-gradient(135deg, #161b22 0%, #1c2333 100%)",
             boxShadow: "0 0 30px rgba(88, 166, 255, 0.2)",
@@ -94,18 +93,16 @@ export function HeroSection() {
 
         {/* Greeting */}
         <p
-          className={`mb-4 text-sm font-medium uppercase tracking-[0.3em] text-primary transition-all duration-700 delay-200 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`mb-4 text-sm font-medium uppercase tracking-[0.3em] text-primary transition-all duration-700 delay-200 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
           Welcome to my portfolio
         </p>
 
         {/* Name */}
         <h1
-          className={`mb-4 text-4xl font-bold leading-tight text-foreground transition-all duration-700 delay-300 sm:text-5xl md:text-6xl lg:text-7xl ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className={`mb-4 text-4xl font-bold leading-tight text-foreground transition-all duration-700 delay-300 sm:text-5xl md:text-6xl lg:text-7xl ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+            }`}
         >
           {"Hi, I'm "}
           <span className="text-primary neon-text">Sudha Mareeswaran</span>
@@ -113,9 +110,8 @@ export function HeroSection() {
 
         {/* Typing text */}
         <div
-          className={`mb-6 h-10 transition-all duration-700 delay-500 ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`mb-6 h-10 transition-all duration-700 delay-500 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
           <span
             className="text-lg font-semibold text-primary sm:text-xl md:text-2xl transition-opacity duration-400"
@@ -137,9 +133,8 @@ export function HeroSection() {
 
         {/* Tagline */}
         <p
-          className={`mx-auto mb-10 max-w-2xl text-sm leading-relaxed text-muted-foreground transition-all duration-700 delay-700 sm:text-base ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`mx-auto mb-10 max-w-2xl text-sm leading-relaxed text-muted-foreground transition-all duration-700 delay-700 sm:text-base ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
           Crafting modern, responsive, and performance-driven web experiences
           with clean code and creative design.
@@ -147,9 +142,8 @@ export function HeroSection() {
 
         {/* Buttons */}
         <div
-          className={`flex flex-col items-center justify-center gap-4 transition-all duration-700 delay-[900ms] sm:flex-row ${
-            isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-          }`}
+          className={`flex flex-col items-center justify-center gap-4 transition-all duration-700 delay-[900ms] sm:flex-row ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
+            }`}
         >
           <a
             href="#projects"
@@ -159,7 +153,7 @@ export function HeroSection() {
             <ArrowDown size={16} className="transition-transform group-hover:translate-y-0.5" />
           </a>
           <a
-            href="/Sudha_Mareeswaran_Frontend_Resume_2026.pdf"
+            href="/Sudha_Mareeswaran_Frontend_Resume_2026 (2).pdf"
             download
             className="group relative flex items-center gap-2 overflow-hidden rounded-xl px-8 py-3.5 text-sm font-semibold text-foreground transition-all duration-300 hover:text-primary-foreground hover:shadow-[0_0_25px_rgba(88,166,255,0.35)]"
             style={{
@@ -179,7 +173,7 @@ export function HeroSection() {
             Download Resume
           </a>
           <a
-            href="/Sudha_Mareeswaran_Frontend_Resume_2026.pdf"
+            href="/Sudha_Mareeswaran_Frontend_Resume_2026 (2).pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group relative flex items-center gap-2 overflow-hidden rounded-xl px-8 py-3.5 text-sm font-semibold text-foreground transition-all duration-300 hover:text-primary-foreground hover:shadow-[0_0_25px_rgba(88,166,255,0.35)]"
@@ -204,9 +198,8 @@ export function HeroSection() {
 
       {/* Scroll indicator */}
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-700 delay-[1100ms] ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
+        className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-700 delay-[1100ms] ${isLoaded ? "opacity-100" : "opacity-0"
+          }`}
       >
         <div
           className="flex h-10 w-6 items-start justify-center rounded-full border-2 border-muted-foreground/30 p-1"
